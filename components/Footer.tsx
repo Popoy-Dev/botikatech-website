@@ -22,12 +22,6 @@ export function Footer() {
               {link.label}
             </a>
           ))}
-          <a
-            href={`mailto:${site.email}`}
-            className="text-sm font-medium text-slate-600 hover:text-brand-600"
-          >
-            {site.email}
-          </a>
         </nav>
       </div>
       <div className="border-t border-slate-100 py-4">

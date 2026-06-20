@@ -63,7 +63,7 @@ export function Pricing() {
       </div>
 
       <p className="mt-8 text-center text-sm text-slate-500">
-        Prices shown are placeholders. Contact us for current rates and payment options.
+        One-time lifetime activation is available on request. Contact us for payment options.
       </p>
     </section>
   );

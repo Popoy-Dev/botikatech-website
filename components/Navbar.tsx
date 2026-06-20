@@ -28,7 +28,7 @@ export function Navbar() {
             className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700"
           >
             <Download className="h-4 w-4" />
-            Download
+            Windows Download
           </a>
         </div>
 
@@ -61,7 +61,7 @@ export function Navbar() {
               className="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white"
             >
               <Download className="h-4 w-4" />
-              Download
+              Windows Download
             </a>
           </div>
         </div>

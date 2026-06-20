@@ -5,7 +5,7 @@ import { site } from '@/lib/content';
 const badges = [
   { icon: WifiOff, label: 'Works fully offline' },
   { icon: ShieldCheck, label: 'Your data stays local' },
-  { icon: HardDrive, label: 'One-time install' },
+  { icon: HardDrive, label: 'Windows installer ready' },
 ];
 
 export function Hero() {

@@ -15,10 +15,9 @@ export const site = {
   name: 'BotikaTech',
   tagline: 'Offline pharmacy management, made simple.',
   description:
-    'A complete pharmacy point-of-sale and management system that runs entirely on your own computer. No internet required, your data stays with you.',
-  email: 'support@botikatech.com',
+    'A complete pharmacy point-of-sale and management system that runs entirely on your own computer. Start with the Windows installer, with a macOS build also available.',
   facebookLabel: 'BotikaTech on Facebook',
-  facebookUrl: 'https://www.facebook.com/',
+  facebookUrl: 'https://www.facebook.com/botikatech',
 };
 
 export const navLinks = [
@@ -92,7 +91,8 @@ export interface Step {
 export const activationSteps: Step[] = [
   {
     title: 'Download & install',
-    description: 'Grab the installer for your operating system and set up BotikaTech in minutes.',
+    description:
+      'Download the Windows .exe installer first for the fastest setup, then install and launch BotikaTech.',
   },
   {
     title: 'Choose a plan & pay',
@@ -115,7 +115,7 @@ export const activationSteps: Step[] = [
 export interface Plan {
   name: string;
   duration: string;
-  /** Placeholder price — update with your real pricing. */
+  /** Display price shown on the pricing cards. */
   price: string;
   period: string;
   highlight?: boolean;
@@ -127,24 +127,30 @@ export const plans: Plan[] = [
   {
     name: 'One Month',
     duration: 'onemonth',
-    price: '₱—',
+    price: '₱99',
     period: '/ month',
     features: ['All features included', 'Single computer', 'Email & Facebook support'],
   },
   {
     name: 'Six Months',
     duration: 'sixmonth',
-    price: '₱—',
+    price: '₱545',
     period: '/ 6 months',
     features: ['All features included', 'Single computer', 'Priority support', 'Save vs. monthly'],
   },
   {
     name: 'One Year',
     duration: 'oneyear',
-    price: '₱—',
+    price: '₱999',
     period: '/ year',
     highlight: true,
-    features: ['All features included', 'Single computer', 'Priority support', 'Best yearly value'],
+    features: [
+      'All features included',
+      'Single computer',
+      'Priority support',
+      'Best yearly value',
+      'About ₱2.74/day',
+    ],
   },
   {
     name: 'One-Time',
@@ -152,5 +158,88 @@ export const plans: Plan[] = [
     price: '₱—',
     period: 'once',
     features: ['All features included', 'Lifetime activation', 'Single computer', 'No recurring fees'],
+  },
+];
+
+export type UserProofType = 'image' | 'video';
+
+export interface UserProofItem {
+  type: UserProofType;
+  title?: string;
+  caption?: string;
+  storeName?: string;
+  imageSrc?: string;
+  videoUrl?: string;
+  facebookEmbedSrc?: string;
+  embedHeight?: number;
+  postUrl?: string;
+}
+
+/**
+ * Social proof content for real stores/users.
+ * - imageSrc should reference files from /public (e.g. /proof/store-1.jpg)
+ * - videoUrl can be YouTube/Facebook links for fallback
+ * - facebookEmbedSrc can use a Facebook plugin post.php URL
+ */
+export const userProofItems: UserProofItem[] = [
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D122179266452112517%26set%3Da.122094284954112517%26type%3D3&show_text=true&width=500',
+    embedHeight: 250,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0yADRoVtfYa1sWenGMsuTcQYUZ7Q7GRgumGWfVKDSeH6PwJcmodUchuo1mZmge8PRl&show_text=true&width=500',
+    embedHeight: 686,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0DMSarRyy2X6rkUF38XRuqvyjHSQ9nYkEA2axVnVxhQoEHPuLpF48rdvWkck7kiCcl&show_text=true&width=500',
+    embedHeight: 745,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid031QiinTuBWmPGw85BmANEgpWxemVTAkoAYgqfcgoiyX2p97addo6s8yW7JjcTUxT4l&show_text=true&width=500',
+    embedHeight: 686,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0BxWxCFiy767hR5dJNFFjRLQnVNwKuGim1BGn4PD77jfYV1jbWRzU34HV7PZWQENal&show_text=true&width=500',
+    embedHeight: 556,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02HUikYVM7VcsABg43Yab9NnfKzLasdk66Aoo7z6FV5jwNNnBuec1n69h2iMZQrHDAl&show_text=true&width=500',
+    embedHeight: 679,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0Dj4keZRLr3FFCGrxSSMBcBJysR8PW7ggPWQQDmrTaiQSKgHtCxR2XAA8sDJs388Ml&show_text=true&width=500',
+    embedHeight: 575,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02fPhzBuK8212ZCMpEgJajuhJ31F79ECUbjTG21QEWvHY9GkAchuuGsiA7bMAWghZRl&show_text=true&width=500',
+    embedHeight: 556,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02GHoszc7KhAHeKmw9fiaMADZoJj5nhCtc1EW1fuvWufsc211u81kG2wRj1Se4Apsjl&show_text=true&width=500',
+    embedHeight: 660,
+  },
+  {
+    type: 'video',
+    facebookEmbedSrc:
+      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02jcmuCgwPHBf2goHkYg5YUFQPGtgkiibYCuARycf17oeoZ99dnyPQkS2y9ciWtiTDl&show_text=true&width=500',
+    embedHeight: 712,
   },
 ];

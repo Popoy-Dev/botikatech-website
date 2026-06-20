@@ -1,10 +1,8 @@
 /**
  * Central place to manage installer download links and product metadata.
  *
- * Installers are NOT committed to the repo (the macOS .dmg is ~145MB).
- * Instead, build them with the desktop app's `npm run build:*` scripts and
- * upload the artifacts to a GitHub Release. The links below point at the
- * "latest" release so they keep working across versions.
+ * The Windows installer is currently served as a static file from this
+ * website's public directory. macOS builds remain on GitHub Releases.
  *
  * To update the version shown on the site, change APP_VERSION below.
  */
@@ -15,7 +13,7 @@ export const APP_VERSION = '1.0.0';
 export const RELEASES_URL = `https://github.com/${REPO}/releases`;
 export const LATEST_RELEASE_URL = `${RELEASES_URL}/latest`;
 
-export type Platform = 'mac' | 'windows' | 'linux';
+export type Platform = 'mac' | 'windows';
 
 export interface DownloadTarget {
   /** Display name for the platform. */
@@ -38,17 +36,10 @@ export const downloads: Record<Platform, DownloadTarget> = {
   },
   windows: {
     label: 'Windows',
-    // Upload the NSIS .exe to the release, then point this at it directly.
-    url: LATEST_RELEASE_URL,
-    note: 'Windows 10/11 · coming soon',
-    available: false,
-  },
-  linux: {
-    label: 'Linux',
-    // Upload the AppImage/.deb to the release, then point this at it directly.
-    url: LATEST_RELEASE_URL,
-    note: 'AppImage / .deb · coming soon',
-    available: false,
+    // public/Botika Tech 2.exe (spaces URL-encoded for safe linking)
+    url: '/Botika%20Tech%202.exe',
+    note: 'Windows 10/11 · .exe installer',
+    available: true,
   },
 };
 
@@ -56,6 +47,5 @@ export const downloads: Record<Platform, DownloadTarget> = {
 export function detectPlatform(userAgent: string): Platform {
   const ua = userAgent.toLowerCase();
   if (ua.includes('win')) return 'windows';
-  if (ua.includes('linux') && !ua.includes('android')) return 'linux';
   return 'mac';
 }

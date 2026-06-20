@@ -18,3 +18,36 @@ body {
 .section-eyebrow {
   @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700 ring-1 ring-inset ring-brand-100;
 }
+
+.user-proof-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  will-change: transform;
+}
+
+.user-proof-marquee-right {
+  animation: user-proof-marquee-right 70s linear infinite;
+}
+
+.user-proof-marquee-left {
+  animation: user-proof-marquee-left 70s linear infinite;
+}
+
+@keyframes user-proof-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes user-proof-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

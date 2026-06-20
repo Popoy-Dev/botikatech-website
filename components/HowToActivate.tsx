@@ -14,8 +14,8 @@ export function HowToActivate() {
             How to activate in 5 steps
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            BotikaTech installs free. To unlock premium features, pay for a plan and we will send
-            you an activation key to enter inside the app.
+            BotikaTech installs free. Start with the Windows installer, then unlock premium
+            features by choosing a plan and entering your activation key inside the app.
           </p>
         </div>
 
