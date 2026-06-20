@@ -64,7 +64,7 @@ function AppPreview() {
   return (
     <div className="flex h-72 bg-slate-50 text-[10px]">
       <aside className="flex w-28 flex-col gap-1 border-r border-slate-100 bg-white p-2">
-        {['Dashboard', 'Cash Fund', 'Products', 'Inventory', 'Orders', 'Reports'].map((item, i) => (
+        {['Dashboard', 'Advance Reports','Cash Fund', 'Products', 'Inventory', 'Orders', 'Reports', 'Customers'].map((item, i) => (
           <div
             key={item}
             className={`rounded px-2 py-1.5 font-medium ${
