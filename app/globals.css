@@ -22,8 +22,14 @@ body {
 .user-proof-marquee-track {
   display: flex;
   width: max-content;
-  gap: 1.25rem;
+  gap: 0.5rem;
   will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .user-proof-marquee-track {
+    gap: 1.25rem;
+  }
 }
 
 .user-proof-marquee-right {

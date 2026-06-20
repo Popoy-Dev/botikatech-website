@@ -129,14 +129,25 @@ export const plans: Plan[] = [
     duration: 'onemonth',
     price: '₱99',
     period: '/ month',
-    features: ['All features included', 'Single computer', 'Email & Facebook support'],
+    features: [
+      'All features included',
+      'Single computer',
+      'Preloaded 1000+ product list (no manual encoding)',
+      'Email & Facebook support',
+    ],
   },
   {
     name: 'Six Months',
     duration: 'sixmonth',
     price: '₱545',
     period: '/ 6 months',
-    features: ['All features included', 'Single computer', 'Priority support', 'Save vs. monthly'],
+    features: [
+      'All features included',
+      'Single computer',
+      'Preloaded 1000+ product list (no manual encoding)',
+      'Priority support',
+      'Save vs. monthly',
+    ],
   },
   {
     name: 'One Year',
@@ -147,17 +158,11 @@ export const plans: Plan[] = [
     features: [
       'All features included',
       'Single computer',
+      'Preloaded 1000+ product list (no manual encoding)',
       'Priority support',
       'Best yearly value',
       'About ₱2.74/day',
     ],
-  },
-  {
-    name: 'One-Time',
-    duration: 'onetime',
-    price: '₱—',
-    period: 'once',
-    features: ['All features included', 'Lifetime activation', 'Single computer', 'No recurring fees'],
   },
 ];
 
@@ -177,69 +182,51 @@ export interface UserProofItem {
 
 /**
  * Social proof content for real stores/users.
- * - imageSrc should reference files from /public (e.g. /proof/store-1.jpg)
- * - videoUrl can be YouTube/Facebook links for fallback
- * - facebookEmbedSrc can use a Facebook plugin post.php URL
+ * - imageSrc should reference files from /public/images
  */
 export const userProofItems: UserProofItem[] = [
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D122179266452112517%26set%3Da.122094284954112517%26type%3D3&show_text=true&width=500',
-    embedHeight: 250,
+    type: 'image',
+    imageSrc: '/images/pampanga-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0yADRoVtfYa1sWenGMsuTcQYUZ7Q7GRgumGWfVKDSeH6PwJcmodUchuo1mZmge8PRl&show_text=true&width=500',
-    embedHeight: 686,
+    type: 'image',
+    imageSrc: '/images/sta-ana-manila-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0DMSarRyy2X6rkUF38XRuqvyjHSQ9nYkEA2axVnVxhQoEHPuLpF48rdvWkck7kiCcl&show_text=true&width=500',
-    embedHeight: 745,
+    type: 'image',
+    imageSrc: '/images/batangas-botika-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid031QiinTuBWmPGw85BmANEgpWxemVTAkoAYgqfcgoiyX2p97addo6s8yW7JjcTUxT4l&show_text=true&width=500',
-    embedHeight: 686,
+    type: 'image',
+    imageSrc: '/images/isabela-basilan-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0BxWxCFiy767hR5dJNFFjRLQnVNwKuGim1BGn4PD77jfYV1jbWRzU34HV7PZWQENal&show_text=true&width=500',
-    embedHeight: 556,
+    type: 'image',
+    imageSrc: '/images/marikina-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02HUikYVM7VcsABg43Yab9NnfKzLasdk66Aoo7z6FV5jwNNnBuec1n69h2iMZQrHDAl&show_text=true&width=500',
-    embedHeight: 679,
+    type: 'image',
+    imageSrc: '/images/marikina-fortune-pharmacy-business-.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid0Dj4keZRLr3FFCGrxSSMBcBJysR8PW7ggPWQQDmrTaiQSKgHtCxR2XAA8sDJs388Ml&show_text=true&width=500',
-    embedHeight: 575,
+    type: 'image',
+    imageSrc: '/images/bulacan-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02fPhzBuK8212ZCMpEgJajuhJ31F79ECUbjTG21QEWvHY9GkAchuuGsiA7bMAWghZRl&show_text=true&width=500',
-    embedHeight: 556,
+    type: 'image',
+    imageSrc: '/images/poblacion-cotobato-pharmacy-business.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02GHoszc7KhAHeKmw9fiaMADZoJj5nhCtc1EW1fuvWufsc211u81kG2wRj1Se4Apsjl&show_text=true&width=500',
-    embedHeight: 660,
+    type: 'image',
+    imageSrc: '/images/novaliches-pharmacy-owner.jpg',
   },
   {
-    type: 'video',
-    facebookEmbedSrc:
-      'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbotikatech%2Fposts%2Fpfbid02jcmuCgwPHBf2goHkYg5YUFQPGtgkiibYCuARycf17oeoZ99dnyPQkS2y9ciWtiTDl&show_text=true&width=500',
-    embedHeight: 712,
+    type: 'image',
+    imageSrc: '/images/feedback-customer.jpg',
+  },
+  {
+    type: 'image',
+    imageSrc: '/images/right-aid-pharmacy.jpg',
   },
 ];

@@ -10,12 +10,12 @@ export function Pricing() {
           Choose a plan that fits your pharmacy
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          Every plan unlocks all features. Pay once and we send your activation key — no accounts,
-          no subscriptions running through us.
+          Every plan includes all features plus a preloaded 1000+ product list, so you can start
+          selling fast with less manual setup.
         </p>
       </div>
 
-      <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -63,7 +63,7 @@ export function Pricing() {
       </div>
 
       <p className="mt-8 text-center text-sm text-slate-500">
-        One-time lifetime activation is available on request. Contact us for payment options.
+        Activation keys are sent after payment confirmation. Contact us for payment options.
       </p>
     </section>
   );
