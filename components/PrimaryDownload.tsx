@@ -29,7 +29,6 @@ export function PrimaryDownload() {
     <div className="flex flex-col items-center gap-2 sm:items-start">
       <a
         href={target.url}
-        download={isWindows ? 'Botika Tech 2.exe' : undefined}
         className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-700 hover:shadow-brand-600/30"
       >
         <Icon className="h-5 w-5" />

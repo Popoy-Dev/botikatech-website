@@ -1,8 +1,7 @@
 /**
  * Central place to manage installer download links and product metadata.
  *
- * The Windows installer is currently served as a static file from this
- * website's public directory. macOS builds remain on GitHub Releases.
+ * Installers are served from GitHub Releases to avoid repository file-size limits.
  *
  * To update the version shown on the site, change APP_VERSION below.
  */
@@ -36,8 +35,8 @@ export const downloads: Record<Platform, DownloadTarget> = {
   },
   windows: {
     label: 'Windows',
-    // public/Botika Tech 2.exe (spaces URL-encoded for safe linking)
-    url: '/Botika%20Tech%202.exe',
+    // Direct download from GitHub Releases.
+    url: 'https://github.com/Popoy-Dev/botikatech-website/releases/download/installer/Botika.Tech.2.exe',
     note: 'Windows 10/11 · .exe installer',
     available: true,
   },

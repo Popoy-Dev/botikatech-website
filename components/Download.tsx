@@ -31,7 +31,6 @@ export function Download() {
               <a
                 key={key}
                 href={target.url}
-                download={isRecommended ? 'Botika Tech 2.exe' : undefined}
                 className={`flex flex-col items-center rounded-2xl border p-8 text-center transition-all hover:-translate-y-1 hover:bg-slate-800 ${
                   isRecommended
                     ? 'border-brand-500 bg-slate-800 ring-1 ring-brand-500/70'
