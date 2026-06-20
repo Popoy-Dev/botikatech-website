@@ -17,7 +17,7 @@ export function UserProof() {
       className={`${widthClassName} shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm`}
     >
       <img
-        src={item.imageSrc ?? '/botikatech-logo.webp'}
+        src={item.imageSrc ?? '/botika-tech.png'}
         alt="BotikaTech customer feedback"
         className={`${imageHeightClassName} w-full object-cover`}
         loading="lazy"

@@ -19,6 +19,11 @@ export const metadata: Metadata = {
       'Run your pharmacy offline with BotikaTech. Download the Windows installer and manage inventory, sales, reports, and backups in one desktop app.',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
